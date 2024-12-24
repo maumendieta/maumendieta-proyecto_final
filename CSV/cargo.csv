@@ -1,0 +1,112 @@
+id_cargo,id_escuela,id_tipo_cargo,id_area,denominacion,horas,turno,puntaje
+235687,1,2,3,mantenimiento,35,mañana,200
+235708,1,2,2,portero,30,mañana,300
+235729,1,2,1,director,40,mañana,546
+235750,1,2,1,precetor,30,mañana,248
+235771,1,2,1,vice director,30,mañana,481
+235792,1,1,1,maestro de grado,30,mañana,190
+235813,1,1,1,maestro de grado,30,mañana,190
+235834,1,1,1,maestro de grado,30,mañana,190
+235855,1,1,1,maestro de grado,30,mañana,190
+235876,1,1,1,maestro de grado,30,mañana,190
+235897,1,1,1,maestro de grado,30,mañana,190
+235918,1,1,1,maestra de musica,16,mañana,185
+235939,1,1,1,maestro educacion fisica,20,mañana,210
+235960,7,2,3,mantenimiento,35,tarde,200
+235981,7,2,2,portero,30,tarde,300
+236002,7,2,1,director,40,tarde,546
+236023,7,2,1,precetor,30,tarde,248
+236044,7,2,1,vice director,30,tarde,481
+236065,7,1,1,docente cat,1,tarde,12,67
+236086,7,1,1,docente cat,2,tarde,12,67
+236107,7,1,1,docente cat,3,tarde,12,67
+236128,7,1,1,docente cat,5,tarde,12,67
+236149,7,1,1,docente cat,4,tarde,12,67
+236170,7,1,1,docente cat,2,tarde,12,67
+236191,7,1,1,docente cat,3,tarde,12,67
+236212,7,1,1,docente cat,4,tarde,12,67
+236233,7,1,1,docente cat,2,tarde,12,67
+236254,7,1,1,docente cat,1,tarde,12,67
+236275,7,1,1,docente cat,1,tarde,12,67
+236296,7,1,1,docente cat,3,tarde,12,67
+236317,7,1,1,docente cat,5,tarde,12,67
+236338,7,1,1,docente cat,1,tarde,12,67
+236359,7,1,1,docente cat,2,tarde,12,67
+236380,7,1,1,docente cat,3,tarde,12,67
+236401,7,1,1,docente cat,5,tarde,12,67
+236422,7,1,1,docente cat,4,tarde,12,67
+236443,7,1,1,docente cat,2,tarde,12,67
+236464,7,1,1,docente cat,3,tarde,12,67
+236485,7,1,1,docente cat,4,tarde,12,67
+236506,7,1,1,docente cat,2,tarde,12,67
+236527,7,1,1,docente cat,1,tarde,12,67
+236548,7,1,1,docente cat,1,tarde,12,67
+236569,7,1,1,docente cat,3,tarde,12,67
+236590,7,1,1,docente cat,5,tarde,12,67
+236611,7,1,1,docente cat,1,tarde,12,67
+236632,7,1,1,docente cat,2,tarde,12,67
+236653,7,1,1,docente cat,3,tarde,12,67
+236674,7,1,1,docente cat,5,tarde,12,67
+236695,7,1,1,docente cat,4,tarde,12,67
+236716,7,1,1,docente cat,2,tarde,12,67
+236737,7,1,1,docente cat,3,tarde,12,67
+236758,7,1,1,docente cat,4,tarde,12,67
+236779,7,1,1,docente cat,2,tarde,12,67
+236800,7,1,1,docente cat,1,tarde,12,67
+236821,7,1,1,docente cat,1,tarde,12,67
+236842,7,1,1,docente cat,3,tarde,12,67
+236863,7,1,1,docente cat,5,tarde,12,67
+236884,7,1,1,docente cat,1,tarde,12,67
+236905,7,1,1,docente cat,2,tarde,12,67
+236926,7,1,1,docente cat,3,tarde,12,67
+236947,7,1,1,docente cat,5,tarde,12,67
+236968,7,1,1,docente cat,4,tarde,12,67
+236989,7,1,1,docente cat,2,tarde,12,67
+237010,7,1,1,docente cat,3,tarde,12,67
+237031,7,1,1,docente cat,4,tarde,12,67
+237052,8,1,1,director,40,tarde,546
+237073,8,1,1,precetor,30,tarde,248
+237094,8,1,1,vice director,30,tarde,481
+237115,8,1,1,maestro educacion tecnica,25,tarde,12,67
+237136,8,1,1,maestro educacion tecnica,25,tarde,12,67
+237157,8,1,1,maestro educacion tecnica,25,tarde,12,67
+237178,8,1,1,maestro educacion tecnica,25,tarde,12,67
+237199,8,1,1,maestro educacion tecnica,19,tarde,12,67
+237220,9,2,3,mantenimiento,35,mañana,200
+237241,9,2,2,portero,30,mañana,300
+237262,9,2,1,director,40,mañana,546
+237283,9,2,1,precetor,30,mañana,248
+237304,9,2,1,vice director,30,mañana,481
+237325,9,1,1,maestro de grado,30,mañana,190
+237346,9,1,1,maestro de grado,30,mañana,190
+237367,9,1,1,maestro de grado,30,mañana,190
+237388,9,1,1,maestro de grado,30,mañana,190
+237409,9,1,1,maestro de grado,30,mañana,190
+237430,9,1,1,maestro de grado,30,mañana,190
+237451,9,1,1,maestra de musica,16,mañana,185
+237472,9,1,1,maestro educacion fisica,20,mañana,210
+237493,10,1,1,director,30,noche,546
+237514,10,1,1,secretario,30,noche,337
+237535,10,1,1,docente cat,3,noche,12,67
+237556,10,1,1,docente cat,5,noche,12,67
+237577,10,1,1,docente cat,4,noche,12,67
+237598,10,1,1,docente cat,2,noche,12,67
+237619,10,1,1,docente cat,4,noche,12,67
+237640,11,1,1,director,30,mañana,546
+237661,11,1,1,secretario,30,mañana,337
+237682,11,1,1,docente cat,3,mañana,12,67
+237703,11,1,1,docente cat,5,mañana,12,67
+237724,11,1,1,docente cat,4,mañana,12,67
+237745,11,1,1,docente cat,2,mañana,12,67
+237766,11,1,1,docente cat,4,mañana,12,67
+237787,11,1,1,docente cat,5,mañana,12,67
+237808,11,1,1,docente cat,4,mañana,12,67
+237829,11,1,1,docente cat,2,mañana,12,67
+237850,11,1,1,docente cat,5,mañana,12,67
+237871,11,1,1,docente cat,5,mañana,12,67
+237892,11,1,1,docente cat,4,mañana,12,67
+237913,11,1,1,docente cat,5,mañana,12,67
+237934,11,1,1,docente cat,5,mañana,12,67
+237955,11,1,1,docente cat,5,mañana,12,67
+237976,11,1,1,docente cat,4,mañana,12,67
+237997,11,1,1,docente cat,2,mañana,12,67
