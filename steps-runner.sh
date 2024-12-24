@@ -7,3 +7,6 @@ docker exec -it mysql-server bash
 
 # CREAR LA BASE DE DATOS DESDE EL CODIGO CREADO
 docker exec -it mysql-server mysql --verbose -u root -p -e "source /proyecto_sql/estructura.sql;"
+
+# GENERAR UNA QUERY POR CODIGO - DOCKER
+docker exec -it mysql-server mysql -u root -p -e "SHOW TABLES liqui_escuela;"
