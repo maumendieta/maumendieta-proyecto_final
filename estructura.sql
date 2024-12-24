@@ -87,8 +87,8 @@ CREATE TABLE emp_cargo(
 ,       id_sit_revista INT
 ,       ftp_cgo DATE
 ,       horas_cargo INT  
-,       antiguedad_años INT
-,       antiguedad_meses INT
+,       ant_an INT
+,       ant_me INT
 );
 
 CREATE TABLE cod_empleado(
