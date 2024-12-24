@@ -21,7 +21,7 @@ INSERT INTO liqui_escuela.tipo_cargo
 -- inserción en TABLA AREA
 INSERT INTO liqui_escuela.area
 (id_area, area_escuela) VALUES
-(1;'docentes'),
+(1,'docentes'),
 (2,'asistentes'),
 (3,'maestranza');
 
@@ -34,7 +34,7 @@ INSERT INTO liqui_escuela.sit_revista
 (99, 'tareas diferentes');
 
 -- inserción en TABLA BANCO
-INSERT INTO liqui_escuela.
+INSERT INTO liqui_escuela.banco
 (id_banco, nombre_banco) VALUES
 (1, 'industrial'),
 (2, 'forestal');
@@ -62,7 +62,7 @@ MODIFY COLUMN agremiado BOOLEAN;
 
 -- inserción en TABLA EMP_CARGO (modificación de tabla por repetición de datos - horas cargo)
 ALTER TABLE liqui_escuela.emp_cargo
-DELETE COLUMN horas_cargo INT;
+DROP COLUMN horas_cargo;
 -- UNA VEZ BORRADA LA COLUMNA se genera dataset con Mockaroo 100 registros y se importa CSV en Workbench
 
 
@@ -78,8 +78,8 @@ ADD COLUMN ind_nombre VARCHAR (200);
 ALTER TABLE liqui_escuela.indice
 MODIFY ind_nombre VARCHAR(200) AFTER  id_indice;
 ALTER TABLE liqui_escuela.indice
-ADD COLUMN mes (INT), 
-ADD COLUMN anio (INT);
+ADD COLUMN mes INT, 
+ADD COLUMN anio INT;
 
 
 INSERT INTO liqui_escuela.indice

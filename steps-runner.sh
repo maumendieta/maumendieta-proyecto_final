@@ -9,4 +9,4 @@ docker exec -it mysql-server bash
 docker exec -it mysql-server mysql --verbose -u root -p -e "source /proyecto_sql/estructura.sql;"
 
 # GENERAR UNA QUERY POR CODIGO - DOCKER
-docker exec -it mysql-server mysql -u root -p -e "SHOW TABLES liqui_escuela;"
+docker exec -it mysql-server mysql -u root -p -e "SHOW TABLES FROM liqui_escuela;"

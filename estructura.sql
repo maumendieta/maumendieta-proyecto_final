@@ -195,10 +195,10 @@ CREATE TABLE liqui_escuela.ausentismo(
 );
 -- ESTABLECE LA FOREINGN KEY CON TABLA EMPLEADOS    
 ALTER TABLE
-        ausentismo
-        ADD CONSTRAINT fk_constraint_empleado_id
+        liqui_escuela.ausentismo
+        ADD CONSTRAINT fk_constraint_ausentismo
         FOREIGN KEY
-        (empleado_id) REFERENCES empleado(id_empleado);
+        (empleado_id) REFERENCES liqui_escuela.empleado(id_empleado);
 
 
         
