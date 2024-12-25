@@ -1,50 +1,51 @@
 USE liqui_escuela;
 
--- INSERTS PARA TABLAS
+-- -- INSERTS PARA TABLAS
 
--- inserción en TABLA ESCUELA
-INSERT INTO liqui_escuela.escuela
-(nombre, numero, categoria, ciudad, nivel) VALUES
-('san justo',2698,1,'rosario',1),
-('obraje',6589,2,'galvez',2),
-('tecnica',4986,1,'rosario',2),
-('patricios',5846,3,'rosario',3),
-('superior',1236,2,'rosario',1),
-('contable',7789,1,'perez',2);
+-- -- inserción en TABLA ESCUELA
+-- INSERT INTO liqui_escuela.escuela
+-- (nombre, numero, categoria, ciudad, nivel) VALUES
+-- ('san justo',2698,1,'rosario',1),
+-- ('obraje',6589,2,'galvez',2),
+-- ('tecnica',4986,1,'rosario',2),
+-- ('patricios',5846,3,'rosario',3),
+-- ('superior',1236,2,'rosario',1),
+-- ('contable',7789,1,'perez',2);
 
--- inserción en TABLA TIPO_CARGO
-INSERT INTO liqui_escuela.tipo_cargo
-(id_tipo_cargo, tipo_cargo) VALUES
-(1,'cat'),
-(2,'cgo');
+-- -- inserción en TABLA TIPO_CARGO
+-- INSERT INTO liqui_escuela.tipo_cargo
+-- (id_tipo_cargo, tipo_cargo) VALUES
+-- (1,'cat'),
+-- (2,'cgo');
 
--- inserción en TABLA AREA
-INSERT INTO liqui_escuela.area
-(id_area, area_escuela) VALUES
-(1,'docentes'),
-(2,'asistentes'),
-(3,'maestranza');
+-- -- inserción en TABLA AREA
+-- INSERT INTO liqui_escuela.area
+-- (id_area, area_escuela) VALUES
+-- (1,'docentes'),
+-- (2,'asistentes'),
+-- (3,'maestranza');
 
--- inserción en TABLA SIT_REVISTA
-INSERT INTO liqui_escuela.sit_revista 
-(id_sit_revista, situacion_revista) VALUES
-(1,'titular'),
-(3, 'reemplazante'),
-(9, 'titular a termino'),
-(99, 'tareas diferentes');
+-- -- inserción en TABLA SIT_REVISTA
+-- INSERT INTO liqui_escuela.sit_revista 
+-- (id_sit_revista, situacion_revista) VALUES
+-- (1,'titular'),
+-- (3, 'reemplazante'),
+-- (9, 'titular a termino'),
+-- (99, 'tareas diferentes');
 
--- inserción en TABLA BANCO
-INSERT INTO liqui_escuela.banco
-(id_banco, nombre_banco) VALUES
-(1, 'industrial'),
-(2, 'forestal');
+-- -- inserción en TABLA BANCO
+-- INSERT INTO liqui_escuela.banco
+-- (id_banco, nombre_banco) VALUES
+-- (1, 'industrial'),
+-- (2, 'forestal');
 
 -- inserción en TABLA EMPLEADO (modificación de tabla por mejora de datos - se agrega columna apellido y se ordena)
-ALTER TABLE liqui_escuela.empleado
-ADD COLUMN apellido VARCHAR (200); 
-ALTER TABLE liqui_escuela.empleado
-MODIFY apellido VARCHAR(200) AFTER  nombre,
-MODIFY COLUMN agremiado BOOLEAN;
+-- ALTER TABLE liqui_escuela.empleado
+-- ADD COLUMN apellido VARCHAR (200); 
+-- ALTER TABLE liqui_escuela.empleado
+-- MODIFY apellido VARCHAR(200) AFTER  nombre,
+-- MODIFY COLUMN agremiado BOOLEAN;
+
 -- INSERT REALIZADO VIA IMPORTACIÓN DE CSV (empleado.csv) 1000 empleados
 
 -- *********************************
@@ -150,4 +151,3 @@ INSERT INTO liqui_escuela.ausentismo
 ('2024-12-21', '122', "imprevisto",1),
 ('2024-12-21', '200', "imprevisto",1),
 ('2024-12-21', '800', "imprevisto",1);
-

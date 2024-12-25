@@ -2,7 +2,7 @@
 -- SE BASA EN DOS VARIABLES: DNI Y MOTIVO
 
 DELIMITER //
-DROP PROCEDURE IF EXISTS liqui_escuela.pd_busca_empleado//
+DROP PROCEDURE IF EXISTS liqui_escuela.pd_busca_empleado;
 CREATE PROCEDURE liqui_escuela.pd_busca_empleado( 
 	IN emp_dni INT,
     OUT emp_id INT)
@@ -18,7 +18,7 @@ DELIMITER ;
 
 
 DELIMITER //
-DROP PROCEDURE IF EXISTS liqui_escuela.pd_baja_empleado//
+DROP PROCEDURE IF EXISTS liqui_escuela.pd_baja_empleado;
 CREATE PROCEDURE liqui_escuela.pd_baja_empleado( 
 	IN emp_dni INT,
     IN baja DATE,
@@ -35,18 +35,18 @@ END//
 DELIMITER ;
 
 
--- llamado a los procedimientos
-SET @salida = 0;
-CALL liqui_escuela.pd_baja_empleado (22137830,'2023-02-03',5);
+-- -- llamado a los procedimientos
+-- SET @salida = 0;
+-- CALL liqui_escuela.pd_baja_empleado (22137830,'2023-02-03',5);
 
--- prueba inicial
-SET @salida = 0;
-CALL liqui_escuela.pd_busca_empleado (22137830,@salida)
+-- -- prueba inicial
+-- SET @salida = 0;
+-- CALL liqui_escuela.pd_busca_empleado (22137830,@salida)
 
 
 -- MISMA FUNCIÓN QUE LA ANTERIOR + USO DE FUNCIÓN INTERNAMENTE PARA DETERMINAR MOTIVO DE BAJA
 DELIMITER //
-DROP PROCEDURE IF EXISTS liqui_escuela.pd_baja_empleado//
+DROP PROCEDURE IF EXISTS liqui_escuela.pd_baja_empleado;
 CREATE PROCEDURE liqui_escuela.pd_baja_empleado( 
 	IN emp_dni INT,
     IN baja DATE,
@@ -66,12 +66,11 @@ END//
 
 DELIMITER ;
 
-
-        --  PROCEDIMIENTO DE INGESTA DE PRESENTISMO
+--  PROCEDIMIENTO DE INGESTA DE PRESENTISMO
 
 DELIMITER //
 
-DROP PROCEDURE IF EXISTS liqui_escuela.sp_ingesta_presentismo //
+DROP PROCEDURE IF EXISTS liqui_escuela.sp_ingesta_presentismo ;
 CREATE PROCEDURE liqui_escuela.sp_ingesta_presentismo (IN dia_asistencia DATE)
 BEGIN
 -- BORRA UN REGISTRO DE DÍA ANTERIOR - PARA QUE NO HAYAN DUPLICADOS EN LA TABLA ASISTENCIA
@@ -102,10 +101,10 @@ END //
 
 DELIMITER ;
 
--- LLAMADO DEL PROCEDIMIENTO PARA LA INGESTA DEL DÍA ACTUAL 
-CALL liqui_escuela.sp_ingesta_presentismo (CURRENT_DATE());
---  LLAMADO DEL PROCEDIMIENTO PARA UNA FECHA ESPECÍFICA
-CALL liqui_escuela.sp_ingesta_presentismo ('2024-12-02');
+-- -- LLAMADO DEL PROCEDIMIENTO PARA LA INGESTA DEL DÍA ACTUAL 
+-- CALL liqui_escuela.sp_ingesta_presentismo (CURRENT_DATE());
+-- --  LLAMADO DEL PROCEDIMIENTO PARA UNA FECHA ESPECÍFICA
+-- CALL liqui_escuela.sp_ingesta_presentismo ('2024-12-02');
 
 -- ANTE LA NECESIDAD DE CARGA DE ASISTENCIA DE UN PERÍODO COMPRENDIDO ENTRE DOS FECHAS, PARA NO HACERLO DE MANERA MANUAL DÍA POR DÍA
 -- SE CREA EL SIGUIENTE PROCEDIMIENTO
@@ -114,7 +113,7 @@ CALL liqui_escuela.sp_ingesta_presentismo ('2024-12-02');
 DELIMITER //
 
 
-DROP PROCEDURE IF EXISTS liqui_escuela.sp_pasa_revista_periodo //
+DROP PROCEDURE IF EXISTS liqui_escuela.sp_pasa_revista_periodo ;
 
 CREATE PROCEDURE liqui_escuela.sp_pasa_revista_periodo 
     (	IN inicio_carga DATE
@@ -134,5 +133,5 @@ END //
 
 DELIMITER ;
 
--- LLAMADO DEL PROCEDIMIENTO PARA CARGAR ASISTENCIA EN EL PERÍODO COMPRENDIDO ENTRE EL 01/11/2024 Y EL 30/11/2024
-CALL liqui_escuela.sp_pasa_revista_periodo ('2024-11-01', '2024-11-30');
+-- -- LLAMADO DEL PROCEDIMIENTO PARA CARGAR ASISTENCIA EN EL PERÍODO COMPRENDIDO ENTRE EL 01/11/2024 Y EL 30/11/2024
+-- CALL liqui_escuela.sp_pasa_revista_periodo ('2024-11-01', '2024-11-30');

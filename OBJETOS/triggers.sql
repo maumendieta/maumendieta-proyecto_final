@@ -3,7 +3,7 @@
 -- Controla la Incompatibilidad, al supervisar la cantidad de horas activas de un empleado a designar.
 
 DELIMITER //
-DROP TRIGGER IF EXISTS liqui_escuela.tg_incomp_emp //
+DROP TRIGGER IF EXISTS liqui_escuela.tg_incomp_emp ;
 
 CREATE TRIGGER liqui_escuela.tg_incomp_emp
 BEFORE INSERT 
@@ -38,7 +38,7 @@ END //
 -- Este Trigger controla si hay un empleado designado como titular en el cargo para poder designar un reemplazante en el mismo
 
 DELIMITER //
-DROP TRIGGER IF EXISTS liqui_escuela.tg_des_reemp //
+DROP TRIGGER IF EXISTS liqui_escuela.tg_des_reemp ;
 
 CREATE TRIGGER liqui_escuela.tg_des_reemp
 BEFORE INSERT 

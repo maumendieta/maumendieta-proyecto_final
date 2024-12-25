@@ -55,12 +55,12 @@ CREATE
 			ORDER BY estado_cargo;
 
 
- -- la vista estado_cargo podría usarla para buscar cargos VACANTES, obteniendo infomación sobre la Escuela y Ciudad a la que pertenece. 
--- (DISPONIBILIDAD) EJEMPLO:
-SELECT * FROM vw_estado_cargo
-LEFT JOIN escuela AS e
-USING (id_escuela)
-WHERE estado_cargo = 'VACANTE' AND denominacion LIKE 'director';
+--  -- la vista estado_cargo podría usarla para buscar cargos VACANTES, obteniendo infomación sobre la Escuela y Ciudad a la que pertenece. 
+-- -- (DISPONIBILIDAD) EJEMPLO:
+-- SELECT * FROM vw_estado_cargo
+-- LEFT JOIN escuela AS e
+-- USING (id_escuela)
+-- WHERE estado_cargo = 'VACANTE' AND denominacion LIKE 'director';
 
 
 

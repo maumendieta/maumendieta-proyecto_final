@@ -1,6 +1,7 @@
 -- funcion que calcula la cantidad de horas que tiene un docente
-DROP FUNCTION IF EXISTS liqui_escuela.fx_empleado_horas
+
 DELIMITER //
+DROP FUNCTION IF EXISTS liqui_escuela.fx_empleado_horas;
 CREATE FUNCTION liqui_escuela.fx_empleado_horas (_dni INT)
 	RETURNS INT
     READS SQL DATA
@@ -20,9 +21,8 @@ DELIMITER ;
 
 -- MISMA FUNCIÓN QUE ANTES, CON CONTROL DE EXISTENCIA DEL DOCENTE
 -- EN CASO DE NO EXISTIR, ARROJA ERROR CON MENSAJE "DOCENTE INEXISTENTE"
-
-DROP FUNCTION IF EXISTS liqui_escuela.fx_empleado_horas
 DELIMITER //
+DROP FUNCTION IF EXISTS liqui_escuela.fx_empleado_horas;
 CREATE FUNCTION liqui_escuela.fx_empleado_horas (_dni INT)
 	RETURNS INT
     READS SQL DATA
@@ -54,8 +54,8 @@ DELIMITER ;
 
 -- FUNCIÓN para calcular la Antigüedad de cada docente
 -- este calculo va a servir para el cálculo del COMPLEMENTO DE ANTIGUEDAD DE LOS SUELDOS
-DROP FUNCTION IF EXISTS liqui_escuela.fx_calc_ant;
 DELIMITER //
+DROP FUNCTION IF EXISTS liqui_escuela.fx_calc_ant;
 CREATE FUNCTION liqui_escuela.fx_calc_ant (_dni INT)
 RETURNS INT
 DETERMINISTIC
@@ -75,8 +75,9 @@ END//
 DELIMITER ;
 
 -- FUNCIÓN QUE CALCULA EL % DE ANTIGUEDAD USANDO LA FUNCIÓN CREADA ANTERIORMENTE
-DROP FUNCTION IF EXISTS liqui_escuela.fx_porc_ant;
+
 DELIMITER //
+DROP FUNCTION IF EXISTS liqui_escuela.fx_porc_ant;
 CREATE FUNCTION liqui_escuela.fx_porc_ant (_dni INT)
 RETURNS FLOAT
 DETERMINISTIC
@@ -104,7 +105,7 @@ DELIMITER ;
 
 
 DELIMITER //
-DROP FUNCTION IF EXISTS liqui_escuela.fx_mot_baja//
+DROP FUNCTION IF EXISTS liqui_escuela.fx_mot_baja;
 CREATE FUNCTION liqui_escuela.fx_mot_baja(_mot INT)
 RETURNS VARCHAR(200)
 DETERMINISTIC
