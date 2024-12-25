@@ -83,3 +83,8 @@ mysql \
 -u root \
 -e "\
 source proyecto_sql/OBJETOS/usuarios.sql; "
+
+# CARGA VERIFICADA OK
+
+# PARA DAR DE BAJA LA BASE DE DATOS
+docker compose  down
