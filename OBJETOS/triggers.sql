@@ -32,7 +32,7 @@ BEGIN
         SET MESSAGE_TEXT = msg;
     END IF;
 END //
-
+DELIMITER ;
 
 
 -- Este Trigger controla si hay un empleado designado como titular en el cargo para poder designar un reemplazante en el mismo
@@ -62,4 +62,49 @@ BEGIN
             END IF;
     END CASE;            
 END //            
+DELIMITER ;
 
+-- -- TRIGGER CREADO PARA EJECUTAR PROCEDIMIENTO CON TCL
+-- DELIMITER //
+-- DROP TRIGGER IF EXISTS liqui_escuela.tg_verificador_edad ;
+
+-- CREATE TRIGGER liqui_escuela.tg_verificador_edad
+-- BEFORE INSERT 
+--         ON liqui_escuela.empleado
+--         FOR EACH ROW
+-- BEGIN
+-- DECLARE _id_banco INT;
+-- DECLARE _nombre VARCHAR (255);
+-- DECLARE _apellido VARCHAR (255);
+-- DECLARE _dni INT;
+-- DECLARE _fecha_nacimiento DATE;
+-- DECLARE _fecha_ingreso DATE;
+-- DECLARE _fecha_baja DATE;
+-- DECLARE _sucursal_banco INT;
+-- DECLARE _cuenta_banco INT;
+-- DECLARE _agremiado ENUM ('SI','NO');
+
+-- SET _id_banco = NEW.id_banco;
+-- SET _nombre = NEW.nombre;
+-- SET _apellido = NEW.apellido;
+-- SET _dni = NEW.dni;
+-- SET _fecha_nacimiento = NEW.fecha_nacimiento;
+-- SET _fecha_ingreso = NEW.fecha_ingreso;
+-- SET _fecha_baja = NEW.fecha_baja;
+-- SET _sucursal_banco = NEW.sucursal_banco;
+-- SET _cuenta_banco = NEW.cuenta_banco;
+-- SET _agremiado = NEW.agremiado;
+
+--     CALL liqui_escuela.sptcl_control_edad (
+--             _id_banco
+--         ,   _nombre
+--         ,   _apellido
+--         ,   _dni
+--         ,   _fecha_nacimiento
+--         ,   _fecha_ingreso
+--         ,   _fecha_baja
+--         ,   _sucursal_banco
+--         ,   _cuenta_banco
+--         ,   _agremiado);          
+-- END //            
+-- DELIMITER ;
