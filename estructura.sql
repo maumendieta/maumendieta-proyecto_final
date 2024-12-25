@@ -42,7 +42,8 @@ CREATE TABLE banco(
 CREATE TABLE empleado(
         id_empleado INT NOT NULL AUTO_INCREMENT PRIMARY KEY
 ,       id_banco INT
-,		nombre VARCHAR(200)
+,	nombre VARCHAR(200)
+,       apellido VARCHAR(200)
 ,       dni INT
 ,       fecha_nacimiento DATE
 ,       fecha_ingreso DATE
