@@ -74,3 +74,12 @@ mysql \
 -e "\
 source proyecto_sql/OBJETOS/vistas.sql; \
 source proyecto_sql/OBJETOS/eventos.sql; "
+
+
+#   QUINTA PARTE DE CARGA DE PROYECTO
+docker exec -it -e MYSQL_PWD="liquimgm" mysql-server \
+mysql \
+--verbose \
+-u root \
+-e "\
+source proyecto_sql/OBJETOS/usuarios.sql; "
