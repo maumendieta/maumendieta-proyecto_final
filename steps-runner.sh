@@ -21,8 +21,6 @@ DROP DATABASE IF EXISTS liqui_escuela;
 source proyecto_sql/estructura.sql; "
 
 # INTENTO DE REALIZAR LA CARGA DEL ARCHIVO .CSV MEDIANTE DOCKER.
-# ERROR 2068 (HY000) at line 1: LOAD DATA LOCAL INFILE file request rejected due to restrictions on access.
-
 # CON ESTE COMANDO SE HABILITA EL local_infile en MYSQL, que habilitaría la carga del ARCHIVO CSV
 docker exec -it -e MYSQL_PWD="liquimgm" mysql-server \
 mysql \
@@ -41,6 +39,8 @@ LOAD DATA LOCAL INFILE '/CSV/empleado.csv' \
 INTO TABLE liqui_escuela.empleado \
 FIELDS TERMINATED BY ',' \
 IGNORE 1 LINES;"
+# ERROR 2068 (HY000) at line 1: LOAD DATA LOCAL INFILE file request rejected due to restrictions on access.
+
 
 # 1- SE IMPORTA EMPLEADO.CSV DESDE MYSQL WORKBENCH, LUEGO SE CONTINÚA CON LA CARGA DEL PROYECTO
 
@@ -84,7 +84,7 @@ mysql \
 -e "\
 source proyecto_sql/OBJETOS/usuarios.sql; "
 
-# CARGA VERIFICADA OK
+# CARGA COMPLETA VERIFICADA OK - SIN ERRORES - :)
 
 # PARA DAR DE BAJA LA BASE DE DATOS
 docker compose  down
