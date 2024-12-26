@@ -1,8 +1,7 @@
--- funcion que calcula la cantidad de horas que tiene un docente
-
+-- FUNCION QUE CALCULA LA CANTIDAD DE HORAS QUE TIENE UNA PERSONA
 DELIMITER //
-DROP FUNCTION IF EXISTS liqui_escuela.fx_empleado_horas;
-CREATE FUNCTION liqui_escuela.fx_empleado_horas (_dni INT)
+DROP FUNCTION IF EXISTS liqui_escuela.fx_empleado_horas_sinexistencia;
+CREATE FUNCTION liqui_escuela.fx_empleado_horas_sinexistencia (_dni INT)
 	RETURNS INT
     READS SQL DATA
 BEGIN
@@ -17,7 +16,7 @@ BEGIN
             RETURN total_horas;
 END //
 DELIMITER ;
-
+-- PRUEBA FUNCIONAMIENTO OK
 
 -- MISMA FUNCIÓN QUE ANTES, CON CONTROL DE EXISTENCIA DEL DOCENTE
 -- EN CASO DE NO EXISTIR, ARROJA ERROR CON MENSAJE "DOCENTE INEXISTENTE"
@@ -50,7 +49,7 @@ BEGIN
 		END IF;             
 END //
 DELIMITER ;
-
+-- PRUEBA FUNCIONAMIENTO OK
 
 -- FUNCIÓN para calcular la Antigüedad de cada docente
 -- este calculo va a servir para el cálculo del COMPLEMENTO DE ANTIGUEDAD DE LOS SUELDOS
@@ -73,9 +72,9 @@ BEGIN
     RETURN antiguedad;
 END//
 DELIMITER ;
+-- PRUEBA FUNCIONAMIENTO OK
 
 -- FUNCIÓN QUE CALCULA EL % DE ANTIGUEDAD USANDO LA FUNCIÓN CREADA ANTERIORMENTE
-
 DELIMITER //
 DROP FUNCTION IF EXISTS liqui_escuela.fx_porc_ant;
 CREATE FUNCTION liqui_escuela.fx_porc_ant (_dni INT)
@@ -98,7 +97,7 @@ BEGIN
     RETURN porc_ant;
 END//
 DELIMITER ;
-
+-- PRUEBA FUNCIONAMIENTO OK
 
 
 -- FUNCIÓN QUE DEFINE MOTIVO DE BAJA DE UN EMPLEADO
@@ -110,7 +109,6 @@ CREATE FUNCTION liqui_escuela.fx_mot_baja(_mot INT)
 RETURNS VARCHAR(200)
 DETERMINISTIC
 BEGIN
-    DECLARE _mot INT;
     DECLARE mot_baja VARCHAR(200);
     CASE 
     WHEN _mot = 1 THEN SET mot_baja = 'renuncia por causas particulares';
@@ -121,3 +119,7 @@ BEGIN
     RETURN mot_baja;
 END//
 DELIMITER ;
+
+-- PRUEBA FUNCIONAMIENTO
+--    SELECT liqui_escuela.fx_mot_baja(1) FROM DUAL;
+-- OK
