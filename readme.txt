@@ -33,3 +33,10 @@ En los Archivos del contenedor, que se detallan a continuación ,se encuentra el
 - docker-compose.yml
 - steps_runner.sh
 - un_github_repo.ext
+
+## BACK UPS
+- Back Up generado desde la Terminal
+- Back Up generado desde la Interfaz de Workbench.
+
+Muchas gracias Anderson, Hugo y Nico.
+
