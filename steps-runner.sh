@@ -82,9 +82,11 @@ mysql \
 --verbose \
 -u root \
 -e "\
+source proyecto_sql/OBJETOS/procedimientos_tcl.sql; \
 source proyecto_sql/OBJETOS/usuarios.sql; "
 
 # CARGA COMPLETA VERIFICADA OK - SIN ERRORES - :)
 
 # PARA DAR DE BAJA LA BASE DE DATOS
 docker compose  down
+

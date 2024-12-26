@@ -96,14 +96,14 @@ CREATE TABLE cod_empleado(
         id_cod_empleado INT NOT NULL AUTO_INCREMENT PRIMARY KEY
 ,       id_emp_cargo INT
 , 	id_indice INT
-, 	id_sueldo INT
-,       calculo INT
-,       referencia INT
+,       calculo DECIMAL (10,2)
 );
 
 CREATE TABLE sueldo(
         id_sueldo INT NOT NULL AUTO_INCREMENT PRIMARY KEY
+,       id_empleado INT
 ,       id_banco INT
+,       id_indice INT
 ,       monto DECIMAL(10,2)
 ,       fecha_deposito DATE
 );
@@ -167,11 +167,12 @@ ALTER TABLE
         ADD CONSTRAINT fk_constraint_id_emp_cargo_cod
         FOREIGN KEY
         (id_emp_cargo) REFERENCES emp_cargo(id_emp_cargo);    
-        ALTER TABLE
+ALTER TABLE
         cod_empleado
-        ADD CONSTRAINT fk_constraint_id_sueldo
+        ADD CONSTRAINT fk_constraint_indice
         FOREIGN KEY
-        (id_sueldo) REFERENCES sueldo(id_sueldo);
+        (id_indice) REFERENCES indice(id_indice);
+
 
 -- indice
 
@@ -188,6 +189,12 @@ ALTER TABLE
         ADD CONSTRAINT fk_constraint_id_banco
         FOREIGN KEY
         (id_banco) REFERENCES banco(id_banco);
+
+ALTER TABLE
+        sueldo
+        ADD CONSTRAINT fk_constraint_id_empleado
+        FOREIGN KEY
+        (id_empleado) REFERENCES empleado(id_empleado);
 
 
 -- CREACIÓN DE UNA TABLA EXTRA PARA REGISTRO DE AUSENTISMO
@@ -213,5 +220,6 @@ CREATE TABLE liqui_escuela.periodos_sueldo(
 ,	anio_p INT NOT NULL 
 ,       concepto VARCHAR (250) NOT NULL
 ,       observaciones VARCHAR (255)
+,       fecha_deposito DATE
 ,    PRIMARY KEY (mes_p,anio_p)
 );

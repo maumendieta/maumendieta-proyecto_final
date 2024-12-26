@@ -70,23 +70,12 @@ DROP COLUMN horas_cargo;
 -- inserción en TABLA COD_EMPLEADO 
 -- se insertará en avance del curso. Depende de la liquidación
 
--- inserción en cod_empleado 
--- se insertará en avance del curso. Depende de la liquidación
 
--- inserción en TABLA INDICE (modificación de tabla por falta de datos: columna agregada ind_nombre, mes, anio)
-ALTER TABLE liqui_escuela.indice
-ADD COLUMN ind_nombre VARCHAR (200);
-ALTER TABLE liqui_escuela.indice
-MODIFY ind_nombre VARCHAR(200) AFTER  id_indice;
-ALTER TABLE liqui_escuela.indice
-ADD COLUMN mes INT, 
-ADD COLUMN anio INT;
-
-
+-- inserción en TABLA INDICE 
 INSERT INTO liqui_escuela.indice
 (mes,anio,basico,compl_basico) VALUES
-(11,2024,274.233,374.566),
-(12,2024,295.544,415.852);
+(10,2024,274.233,374.566),
+(11,2024,295.544,415.852);
 
 
 

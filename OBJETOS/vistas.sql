@@ -83,3 +83,20 @@ CREATE
 						LEFT JOIN liqui_escuela.escuela as esc USING (id_escuela)
 							) AS area_esc USING (id_cargo)
 				ORDER BY e.apellido;
+
+
+-- VISTA TOTAL DE SUELDO POR EMPLEADO Y POR PERÍODO
+CREATE 
+	OR REPLACE VIEW
+		liqui_escuela.vw_sueldo_periodo_x_empleado AS
+		SELECT 
+			emp.id_banco
+        ,   SUM(cem.calculo)  as monto
+        ,	'2024-12-05' AS fecha_deposito
+        ,   cem.id_indice
+        , 	emp.id_empleado
+            FROM liqui_escuela.cod_empleado AS cem
+            LEFT JOIN liqui_escuela.emp_cargo AS eca USING (id_emp_cargo)
+            LEFT JOIN liqui_escuela.empleado AS emp USING (id_empleado)
+            GROUP BY emp.id_empleado, emp.id_banco,cem.id_indice
+            ORDER BY emp.id_empleado;
