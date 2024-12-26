@@ -1,11 +1,11 @@
-PS C:\Users\pc\Documents\MAURO\CURSOS\SQL\CONTENIDO\PROYECTO_FINAL\liqui_mgm24_sql59430> git init
-Reinitialized existing Git repository in C:/Users/pc/Documents/MAURO/CURSOS/SQL/CONTENIDO/PROYECTO_FINAL/liqui_mgm24_sql59430/.git/
-PS C:\Users\pc\Documents\MAURO\CURSOS\SQL\CONTENIDO\PROYECTO_FINAL\liqui_mgm24_sql59430> git add .
+PS C:\...\PROYECTO_FINAL\liqui_mgm24_sql59430> git init
+Reinitialized existing Git repository in C:/.../PROYECTO_FINAL/liqui_mgm24_sql59430/.git/
+PS C:\...\PROYECTO_FINAL\liqui_mgm24_sql59430> git add .
 warning: in the working copy of 'BACKUPS/backups.sh', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'CSV/emp_cargo.csv', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'CSV/empleado.csv', LF will be replaced by CRLF the next time Git touches it
 warning: in the working copy of 'estructura.sql', LF will be replaced by CRLF the next time Git touches it
-PS C:\Users\pc\Documents\MAURO\CURSOS\SQL\CONTENIDO\PROYECTO_FINAL\liqui_mgm24_sql59430> git commit -m "carga repositorio"
+PS C:\...\PROYECTO_FINAL\liqui_mgm24_sql59430> git commit -m "carga repositorio"
 Author identity unknown
 
 *** Please tell me who you are.
@@ -18,7 +18,6 @@ Run
 to set your account's default identity.
 Omit --global to set the identity only in this repository.
 
-fatal: unable to auto-detect email address (got 'pc@DESKTOP-CJP47J2.(none)')
 PS C:\Users\pc\Documents\MAURO\CURSOS\SQL\CONTENIDO\PROYECTO_FINAL\liqui_mgm24_sql59430> git config --global user.email "maurogmen@gmail.com"
 PS C:\Users\pc\Documents\MAURO\CURSOS\SQL\CONTENIDO\PROYECTO_FINAL\liqui_mgm24_sql59430> git config --global user.name "maumendieta"
 PS C:\Users\pc\Documents\MAURO\CURSOS\SQL\CONTENIDO\PROYECTO_FINAL\liqui_mgm24_sql59430> git commit -m "carga repositorio"
@@ -43,38 +42,11 @@ PS C:\Users\pc\Documents\MAURO\CURSOS\SQL\CONTENIDO\PROYECTO_FINAL\liqui_mgm24_s
  create mode 100644 eb-der-liqui_escuela.pdf
  create mode 100644 estructura.sql
  create mode 100644 readme.txt
-PS C:\Users\pc\Documents\MAURO\CURSOS\SQL\CONTENIDO\PROYECTO_FINAL\liqui_mgm24_sql59430> git branch -M main
-PS C:\Users\pc\Documents\MAURO\CURSOS\SQL\CONTENIDO\PROYECTO_FINAL\liqui_mgm24_sql59430> git remote and origin https://github.com/maumendieta/maumendieta-proyecto_final.enterprise.git
-error: unknown subcommand: `and'
-usage: git remote [-v | --verbose]
-   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
-   or: git remote rename [--[no-]progress] <old> <new>
-   or: git remote remove <name>
-   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-   or: git remote [-v | --verbose] show [-n] <name>
-   or: git remote prune [-n | --dry-run] <name>
-   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
-   or: git remote set-branches [--add] <name> <branch>...
-   or: git remote get-url [--push] [--all] <name>
-   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
-   or: git remote set-url --add <name> <newurl>
-   or: git remote set-url --delete <name> <url>
-
-    -v, --[no-]verbose    be verbose; must be placed before a subcommand
-
-PS C:\Users\pc\Documents\MAURO\CURSOS\SQL\CONTENIDO\PROYECTO_FINAL\liqui_mgm24_sql59430> git remote add origin https://github.com/maumendieta/maumendieta-proyecto_final.enterprise.git                      
-PS C:\Users\pc\Documents\MAURO\CURSOS\SQL\CONTENIDO\PROYECTO_FINAL\liqui_mgm24_sql59430> git push -u origin main
-info: please complete authentication in your browser...
-remote: Repository not found.
-fatal: repository 'https://github.com/maumendieta/maumendieta-proyecto_final.enterprise.git/' not found
-PS C:\Users\pc\Documents\MAURO\CURSOS\SQL\CONTENIDO\PROYECTO_FINAL\liqui_mgm24_sql59430> git push -u origin main
-info: please complete authentication in your browser...
-remote: Repository not found.
-fatal: repository 'https://github.com/maumendieta/maumendieta-proyecto_final.enterprise.git/' not found
-PS C:\Users\pc\Documents\MAURO\CURSOS\SQL\CONTENIDO\PROYECTO_FINAL\liqui_mgm24_sql59430> git remote add origin https://github.com/maumendieta/maumendieta-proyecto_final.git           
+PS C:\...\PROYECTO_FINAL\liqui_mgm24_sql59430> git branch -M main
+PS C:\...\SQL\CONTENIDO\PROYECTO_FINAL\liqui_mgm24_sql59430> git remote add origin https://github.com/maumendieta/maumendieta-proyecto_final.git           
 error: remote origin already exists.
-PS C:\Users\pc\Documents\MAURO\CURSOS\SQL\CONTENIDO\PROYECTO_FINAL\liqui_mgm24_sql59430> git remote set-url origin https://github.com/maumendieta/maumendieta-proyecto_final.git
-PS C:\Users\pc\Documents\MAURO\CURSOS\SQL\CONTENIDO\PROYECTO_FINAL\liqui_mgm24_sql59430> git push -u origin main
+PS C:\...\CONTENIDO\PROYECTO_FINAL\liqui_mgm24_sql59430> git remote set-url origin https://github.com/maumendieta/maumendieta-proyecto_final.git
+PS C:\...\CONTENIDO\PROYECTO_FINAL\liqui_mgm24_sql59430> git push -u origin main
 info: please complete authentication in your browser...
 Enumerating objects: 24, done.
 Counting objects: 100% (24/24), done.
@@ -85,4 +57,4 @@ Total 24 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
 To https://github.com/maumendieta/maumendieta-proyecto_final.git
  * [new branch]      main -> main
 branch 'main' set up to track 'origin/main'.
-PS C:\Users\pc\Documents\MAURO\CURSOS\SQL\CONTENIDO\PROYECTO_FINAL\liqui_mgm24_sql59430> 
+PS C:\...\CONTENIDO\PROYECTO_FINAL\liqui_mgm24_sql59430> 
