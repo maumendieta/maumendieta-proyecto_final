@@ -30,3 +30,6 @@ Por otro lado se presenta la carpeta `Objetos`, la cual contiene los scripts de 
 ## CREACIÓN DE REPOSITORIO EN GITHUB USANDO DOCKER Y VISUAL STUDIO CODE.
 Animado por el desafío de poder crear un repositorio que habite en la "nube" de GitHub y, confiando en los aprendizajes adquiridos en clase y las explicaciones detalladas ofrecidas por Anderson y los tutores, me encaminé en la creación del Repositorio.
 En los Archivos del contenedor, que se detallan a continuación ,se encuentra el paso a paso del trabajo realizado:
+- docker-compose.yml
+- steps_runner.sh
+- un_github_repo.ext
