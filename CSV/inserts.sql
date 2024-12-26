@@ -84,10 +84,10 @@ ADD COLUMN anio INT;
 
 
 INSERT INTO liqui_escuela.indice
-(ind_nombre,valor_indice, mes, anio) VALUES
-('basico',384,11,2024),
-('antiguedad',null,11,2024),
-('complemento basico',500,11,2024);
+(mes,anio,basico,compl_basico) VALUES
+(11,2024,274.233,374.566),
+(12,2024,295.544,415.852);
+
 
 
 -- PARA LA NUEVA TABLA GENERADA, ANTE LA NECESIDAD DE REGISTRO DE INASISTENCIAS, SE CREA LA TABLA AUSENTISMO
@@ -151,3 +151,9 @@ INSERT INTO liqui_escuela.ausentismo
 ('2024-12-21', '122', "imprevisto",1),
 ('2024-12-21', '200', "imprevisto",1),
 ('2024-12-21', '800', "imprevisto",1);
+
+
+INSERT INTO liqui_escuela.periodos_sueldo(mes_p,anio_p,concepto) VALUES
+(10,2024, "SUELDO OCTUBRE 2024"),
+(11,2024, "SUELDO NOVIEMBRE 2024"),
+(14,2024, "2° CUOTA - S.A.C. 2024");

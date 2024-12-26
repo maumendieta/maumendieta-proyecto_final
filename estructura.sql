@@ -110,8 +110,10 @@ CREATE TABLE sueldo(
 
 CREATE TABLE indice(
 		id_indice INT NOT NULL AUTO_INCREMENT PRIMARY KEY
-,		id_cod_empleado INT
-,		valor_indice DECIMAL(10,4)
+,		mes INT
+,               anio INT
+,		basico DECIMAL(10,4)
+,               compl_basico DECIMAL(10,4)
 );
 
 -- *********************************
@@ -172,11 +174,13 @@ ALTER TABLE
         (id_sueldo) REFERENCES sueldo(id_sueldo);
 
 -- indice
+
 ALTER TABLE
         indice
-        ADD CONSTRAINT fk_constraint_cod_empleado
-        FOREIGN KEY
-        (id_cod_empleado) REFERENCES cod_empleado(id_cod_empleado);
+        ADD CONSTRAINT fk_constraint_periodos_sueldo
+        FOREIGN KEY (mes,anio) 
+        REFERENCES liqui_escuela.periodos_sueldo(mes_p,anio_p);
+
 
 -- sueldo    
 ALTER TABLE
@@ -184,6 +188,7 @@ ALTER TABLE
         ADD CONSTRAINT fk_constraint_id_banco
         FOREIGN KEY
         (id_banco) REFERENCES banco(id_banco);
+
 
 -- CREACIÓN DE UNA TABLA EXTRA PARA REGISTRO DE AUSENTISMO
 CREATE TABLE liqui_escuela.ausentismo(
@@ -202,4 +207,11 @@ ALTER TABLE
         (empleado_id) REFERENCES liqui_escuela.empleado(id_empleado);
 
 
-        
+-- CREACIÓN DE UNA TABLA EXTRA PARA REGISTRO DE PERÍODOS DE LIQUIDACION DE SUELDO
+CREATE TABLE liqui_escuela.periodos_sueldo(
+        mes_p INT NOT NULL
+,	anio_p INT NOT NULL 
+,       concepto VARCHAR (250) NOT NULL
+,       observaciones VARCHAR (255)
+,    PRIMARY KEY (mes_p,anio_p)
+);
