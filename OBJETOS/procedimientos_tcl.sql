@@ -6,7 +6,7 @@ DELIMITER //
 
 DROP PROCEDURE IF EXISTS liqui_escuela.sptcl_control_edad;
 
-CREATE PROCEDURE liqui_escuela..sptcl_control_edad (
+CREATE PROCEDURE liqui_escuela.sptcl_control_edad (
         IN _id_banco INT,
         IN _nombre VARCHAR(200),
         IN _apellido VARCHAR(200),

@@ -208,4 +208,24 @@ DELIMITER ;
 
 -- PRUEBA DE FUNCIONAMIENTO OK
 
-INSERT INTO liqui_escuela.sueldo (id_banco,monto,fecha_deposito,id_indice,id_empleado) VALUES
+
+
+-- CARGA LOS DATOS DE SUELDOS POR PERÍODOS EN LA TABLA SUELDOS - AGRUPADO POR PERSONA Y PERIODO
+DELIMITER //
+DROP PROCEDURE IF EXISTS liqui_escuela.carga_sueldos_periodo ;
+CREATE PROCEDURE liqui_escuela.carga_sueldos_periodo 
+    (	IN s_mes INT
+    , 	IN s_anio INT)
+BEGIN
+	-- DECLARACION DE VARIABLE
+    DECLARE ind_ref INT;
+    -- SE SETEA LA FECHA A PROCESAR EN EL PROCEDIMIENTO - FECHA INICIAL  
+    SET ind_ref = 
+		(SELECT id_indice FROM liqui_escuela.indice 
+			WHERE mes = s_mes AND anio = s_anio LIMIT 1);
+    INSERT INTO liqui_escuela.sueldo (id_banco, monto, id_indice, id_empleado)
+		SELECT banco, monto, indice, empleado
+		FROM liqui_escuela.vw_sueldo_periodo_x_empleado
+		WHERE indice = ind_ref;
+END //
+DELIMITER ;

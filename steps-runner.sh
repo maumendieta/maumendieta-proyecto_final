@@ -89,4 +89,3 @@ source proyecto_sql/OBJETOS/usuarios.sql; "
 
 # PARA DAR DE BAJA LA BASE DE DATOS
 docker compose  down
-

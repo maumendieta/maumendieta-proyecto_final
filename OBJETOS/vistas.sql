@@ -90,11 +90,10 @@ CREATE
 	OR REPLACE VIEW
 		liqui_escuela.vw_sueldo_periodo_x_empleado AS
 		SELECT 
-			emp.id_banco
+			emp.id_banco as banco
         ,   SUM(cem.calculo)  as monto
-        ,	'2024-12-05' AS fecha_deposito
-        ,   cem.id_indice
-        , 	emp.id_empleado
+        ,   cem.id_indice as indice
+        , 	emp.id_empleado as empleado
             FROM liqui_escuela.cod_empleado AS cem
             LEFT JOIN liqui_escuela.emp_cargo AS eca USING (id_emp_cargo)
             LEFT JOIN liqui_escuela.empleado AS emp USING (id_empleado)
